@@ -20,20 +20,21 @@
     }
 //d. write the above if/else statement again as a ternary 
     function rideMetro(metrocard){
-        return metrocard ? 2.75
-            : metrocard ?
+        return metrocard >= 2.75 ? "You have enough to ride the train": "you do not have enough fare sorry"
     }
+    console.log(rideMetro(1.50))
 //3. conditionals 2 (1 pt)
 //a.  complete this codecademy project: https://www.codecademy.com/courses/introduction-to-javascript/projects/magic-eight-ball-1 
 //add a screenshot showing your completion of this project to the root folder of this repo
 
 //4. functions 
 //a. write a function named helloWorld that returns the value 'Hello World!' 
-function helloWorld(greeting){
-    return greeting = 'Hello World!'
+function helloWorld(){
+    let greeting = 'Hello World!';
+    return greeting;
 }
 //b. console log the value returned from running the function helloWorld
-console.log(helloWorld)
+console.log(helloWorld())
 
 //3. arrays
 //a. define a variable myArray and assign it to a value of an array. Give the array at least 5 elements
@@ -45,16 +46,16 @@ let myArray = ['bread','pasta','rice','potates', 5]
 //4. loops 
 //a. write a for loop that console logs even numbers starting at 10 and decrementing to 0 
 for(i = 10; i >= 0; i--) {
-    return i
+    console.log(i)
 }
-console.log(i)
+
 //5. objects
 //a. define a variable named 'bike' 
 let bike;
 //b. assign an object to bike 
 bike = []
 //c. give the object 3 properties: handlebars, color, wheels 
-bike = {handlebars, color, wheels}
+// bike = {handlebars, color, wheels}
 //d. give each property a value 
 bike = [{
     handlebars: true,
@@ -80,12 +81,20 @@ read and refer to https://eloquentjavascript.net/02_program_structure.html  ther
 */
 
 //create funcation that creates a string
-function chessboard(piece, board){
-    for(){
-        
+function chessboard(row, col){
+    let board = " ";
+    for (let x = 0; x < row; x++){
+        for (let y = 0; y < col; y++){
+            if((x + y) % 2 == 0){
+                board += " ";
+            }
+            else{
+                board += "#"
+            }
+        }
+        board += "\n"
     }
+    return board;
 }
-
-
-
+console.log(chessboard(8, 8))
 
